@@ -1,0 +1,54 @@
+Screen:
+    MDNavigationLayout:
+        ScreenManager:
+            Screen:
+                BoxLayout:
+                    orientation:'vertical'
+
+                MDTopAppBar:
+                    title:'DemoApp'
+                    left_action_items:[['menu',lambda x:nav_drawer.set_state('open')]]
+                    elevation: 3
+                MDLabel:
+                    text:'Hello world'
+                    halign:'center'
+
+                Widget:
+        MDNavigationDrawer:
+            id:nav_drawer
+            
+            
+            
+            BoxLayout:
+                orientation:'vertical'
+                spacing:'8dp'
+                padding: '8dp'
+
+                Image:
+                    source:'bunitao.jpg'
+
+                MDLabel:
+                    text:'Mateus'
+                    font_style:'Subtitle1'
+                    size_hint_y: None
+                    height: self.texture_size[1]
+                MDLabel:
+                    text:'mateusxavier1659@gmail.com'
+                    font_style:'Caption'
+                    size_hint_y: None
+                    height: self.texture_size[1]
+
+                ScrollView:
+                    MDList:
+                        OneLineIconListItem:
+                            text: 'Profile'
+                            IconLeftWidget:
+                                icon:'face-profile-woman'
+                        OneLineIconListItem:
+                            text: 'file-upload'
+                            IconLeftWidget:
+                                icon:'android'
+                        OneLineIconListItem:
+                            text: 'Logout'
+                            IconLeftWidget:
+                                icon:'logout'
